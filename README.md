@@ -1,1 +1,1 @@
-# kanban-board
+# JavaScript Capstone: Group Project
