@@ -1,3 +1,45 @@
-body {
-    color: red;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.animeImage {
+  width: 250px;
+  height: 400px;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  max-width: 350px;
+}
+
+.heart {
+  margin-left: 15px;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.like {
+  color: red;
+}
+
+.commentBox {
+  padding: 0.25em 0.5em;
+  width: 100px;
+  box-shadow: 1px 1px 0 0, 2px 2px 0 0, 3px 3px 0 0, 4px 4px 0 0, 5px 5px 0 0;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.commentBox:active {
+  box-shadow: 0 0 0 0;
+  top: 5px;
+  left: 5px;
+}
