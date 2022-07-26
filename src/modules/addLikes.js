@@ -1,28 +1,30 @@
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 const animeID = 'Op7SOdAYfpP1vs20vayc';
-const dataUrl = `${baseUrl}apps/:${animeID}/likes/`;
+const dataUrl = `${baseUrl}apps/${animeID}/likes/`;
 // POST
 const addLikes = async (item) => {
-  await fetch(dataUrl, {
-    method: 'POST',
-    body: JSON.stringify({
-      id: item,
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
+  const response = await fetch (dataUrl,
+    {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(item),
     },
-  }).then((response) => response.json());
+  );
+  const data = await response.json();
+  return data;
+
 };
 // GET
-const fetchLikes = async (likes, item) => {
+const fetchLikes = async () => {
     await fetch(dataUrl, {
         method: 'GET',
-        body: JSON.parse({
-            likes: likes,
-            id: item
-        }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
           },
     }).then((response) => response.json())
 }
+
+export { addLikes, fetchLikes };

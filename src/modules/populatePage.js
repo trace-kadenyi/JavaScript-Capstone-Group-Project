@@ -1,3 +1,4 @@
+import { addLikes } from "./addLikes";
 const mainList = document.querySelector('.mainlist');
 
 const populateAnimes = (animeList) => {
@@ -21,13 +22,20 @@ const populateAnimes = (animeList) => {
     // heart
     const heart = document.createElement('button');
     heart.className = 'heart';
-    heart.innerHTML = '<i class="far fa-heart"></i>';
+    heart.id = `${anime.anime_id}`;
+    heart.innerHTML = `<i class="far fa-heart" id=${anime.anime_id}></i>`;
     animeTitle.appendChild(heart);
     // comment box
     const commentBox = document.createElement('button');
     commentBox.className = 'commentBox';
     commentBox.innerHTML = 'Comments';
     oneList.appendChild(commentBox);
+
+    // event listener
+    heart.addEventListener('click', (e) => {
+      console.log(addLikes(e.target.id));
+      
+    })
   });
 };
 
