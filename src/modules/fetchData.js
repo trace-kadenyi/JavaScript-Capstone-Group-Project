@@ -1,10 +1,16 @@
-import populateAnimes from './populatePage.js';
+import axios from 'axios';
 
-const fetchAnimes = async () => {
-  await fetch('https://yts.mx/api/v2/list_movies.json?genre=animation&limit=25&sort_by=download_count&minimum_rating=7')
-    .then((response) => response.json())
-    .then((json) => populateAnimes(json.data.movies))
-    .catch((err) => console.error(err));
+export default async () => {
+  let response;
+  await axios
+    .get(
+      'https://yts.mx/api/v2/list_movies.json?genre=animation&limit=25&sort_by=download_count&minimum_rating=7',
+    )
+    .then((res) => {
+      response = res;
+    })
+    .catch((err) => {
+      response = err;
+    });
+  return response;
 };
-
-export default fetchAnimes;

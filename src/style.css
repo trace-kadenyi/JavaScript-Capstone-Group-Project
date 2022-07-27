@@ -9,7 +9,6 @@
   margin-bottom: 5px;
 }
 
-
 ul {
   list-style-type: none;
 }
@@ -44,6 +43,12 @@ li {
   top: 5px;
   left: 5px;
 }
+
 .footer {
   border-top: 1px black solid;
+}
+
+.divElement {
+  display: flex;
+  justify-content: space-between;
 }
