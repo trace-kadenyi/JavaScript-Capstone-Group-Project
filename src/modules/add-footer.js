@@ -1,10 +1,7 @@
 const footer = document.querySelector('.footer');
 
 const addFooter = () => {
-  const footerContent = document.createElement('p');
-  footerContent.textContent = `Copyright &copy; ${new Date().getFullYear()}`;
-
-  footer.appendChild(footerContent);
+  footer.innerHTML = `<p>Copyright &copy; ${new Date().getFullYear()}</p>`;
 };
 
 export default addFooter;
