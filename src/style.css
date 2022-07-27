@@ -56,3 +56,24 @@ li {
 .fa-heart {
   color: red;
 }
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  border-bottom: 2px solid black;
+}
+
+.logoimage {
+  width: 250px;
+}
+
+nav a {
+  color: brown;
+}
+
+nav a:hover {
+  color: brown;
+  font-weight: bold;
+}

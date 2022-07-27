@@ -1,9 +1,11 @@
 import postLike from './modules/postLikes.js';
 import getLikes from './modules/getLikes.js';
 import fetchAnimes from './modules/fetchData.js';
+import addLogo from './modules/createHeader.js';
 import './style.css';
 import addFooter from './modules/add-footer.js';
 
+addLogo();
 // call the unordered list
 const mainList = document.querySelector('.mainlist');
 // populate the page
