@@ -2,7 +2,7 @@ import { addLikes } from "./addLikes";
 const mainList = document.querySelector('.mainlist');
 
 const populateAnimes = (animeList) => {
-  const animeData = animeList.filter((item) => item.anime_id !== 4);
+  const animeData = animeList.filter((item) => item.title.length < 20);
   animeData.forEach((anime) => {
     // list
     const oneList = document.createElement('li');
@@ -11,29 +11,34 @@ const populateAnimes = (animeList) => {
     // image
     const animeImage = document.createElement('img');
     animeImage.className = 'animeImage';
-    animeImage.src = `${anime.anime_img}`;
+    animeImage.src = `${anime.medium_cover_image}`;
     animeImage.alt = 'anime image';
     oneList.appendChild(animeImage);
     // title
     const animeTitle = document.createElement('h5');
     animeTitle.className = 'animetitle';
-    animeTitle.innerHTML = `${anime.anime_name}`;
+    animeTitle.innerHTML = `${anime.title}`;
     oneList.appendChild(animeTitle);
     // heart
     const heart = document.createElement('button');
     heart.className = 'heart';
-    heart.id = `${anime.anime_id}`;
-    heart.innerHTML = `<i class="far fa-heart" id=${anime.anime_id}></i>`;
+    heart.id = `${anime.id}`;
+    heart.innerHTML = `<i class="far fa-heart" id=${anime.id}></i><p><span id=${anime.id}> 0 </span>Likes</p>`;
     animeTitle.appendChild(heart);
     // comment box
     const commentBox = document.createElement('button');
     commentBox.className = 'commentBox';
     commentBox.innerHTML = 'Comments';
     oneList.appendChild(commentBox);
-
+// console.log(heart.id)
     // event listener
+    
     heart.addEventListener('click', (e) => {
-      console.log(addLikes(e.target.id));
+      const id = e.target.id
+      addLikes(id);
+
+      // console.log(id)
+
       
     })
   });
