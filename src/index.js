@@ -2,10 +2,12 @@ import postLike from './modules/postLikes.js';
 import getLikes from './modules/getLikes.js';
 import fetchAnimes from './modules/fetchData.js';
 import addLogo from './modules/createHeader.js';
+import countitems from './modules/homepageCounter.js';
 import './style.css';
 import addFooter from './modules/add-footer.js';
 
 addLogo();
+countitems();
 // call the unordered list
 const mainList = document.querySelector('.mainlist');
 // populate the page
@@ -59,11 +61,11 @@ fetchAnimes().then((response) => {
     const likes = res.data;
     const { movies } = response.data.data;
     movies.forEach((anime) => {
-      const fm = likes.find((like) => like.item_id === String(anime.id));
-      if (fm) {
+      const likesFound = likes.find((like) => like.item_id === String(anime.id));
+      if (likesFound) {
         restructuredAnimes.push({
           ...anime,
-          likes: fm.likes,
+          likes: likesFound.likes,
         });
       } else {
         restructuredAnimes.push({
