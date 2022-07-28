@@ -1,6 +1,6 @@
 const popupContainer = document.querySelector('.popup');
 
-const popup = (ID, arr) => 
+const popup = (ID, arr) => {
   const movie = {
     name: arr[ID].title,
     image: arr[ID].medium_cover_image,
