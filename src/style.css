@@ -62,16 +62,16 @@ a {
 }
 
 .header {
-  /* position: relative; */
   border-bottom: 50px dotted black;
   border-bottom-right-radius: 40%;
   border-bottom-left-radius: 40%;
+  margin-bottom: 50px;
 }
 
 .logoimage {
   width: 250px;
   height: 140px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 nav a {
@@ -117,6 +117,15 @@ nav a:hover {
   letter-spacing: 0.2rem;
 }
 
+.counter {
+  font-weight: bold;
+  background-image: url('./back.PNG');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* media breakpoints */
 @media screen and (max-width: 550px) {
   .logoimage {
     width: 170px;
