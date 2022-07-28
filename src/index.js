@@ -5,6 +5,7 @@ import addLogo from './modules/createHeader.js';
 import countitems from './modules/homepageCounter.js';
 import './style.css';
 import addFooter from './modules/add-footer.js';
+import popup from './modules/commentPopup.js';
 
 addLogo();
 countitems();
@@ -40,7 +41,10 @@ const populateAnimes = (animeList) => {
     heart.innerHTML = `<i id=${anime.id} class="far fa-heart" id=${anime.id}></i><p><span> ${anime.likes} </span>Likes</p>`;
     div.appendChild(heart);
     // comment box
+    const index = animeData.findIndex((x) => x.id === anime.id);
+    // const indexId = index + 1;
     const commentBox = document.createElement('button');
+    commentBox.id = `${index}`;
     commentBox.className = 'commentBox';
     commentBox.innerHTML = 'Comments';
     oneList.appendChild(commentBox);
@@ -51,6 +55,12 @@ const populateAnimes = (animeList) => {
       postLike(id).then(() => {
         window.location.reload();
       });
+    });
+    commentBox.addEventListener('click', (e) => {
+      e.preventDefault();
+      const { id } = e.target;
+      // console.log(indexId);
+      popup(id, animeData);
     });
   });
 };
