@@ -62,11 +62,16 @@ a {
 }
 
 .header {
-  border-bottom: 2px solid black;
+  /* position: relative; */
+  border-bottom: 50px dotted black;
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 40%;
 }
 
 .logoimage {
   width: 250px;
+  height: 140px;
+  margin-bottom: 15px;
 }
 
 nav a {
@@ -76,4 +81,78 @@ nav a {
 nav a:hover {
   color: brown;
   font-weight: bold;
+}
+
+.welcome {
+  background-image: url('./back.PNG');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+}
+
+.everything {
+  letter-spacing: 0.2rem;
+}
+
+.moana {
+  background-image: url('./mulan.jpg');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mulan {
+  background-image: url('./moana.jpg');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.from-text {
+  letter-spacing: 0.3rem;
+}
+
+.characters {
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 550px) {
+  .logoimage {
+    width: 170px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .header {
+    position: relative;
+  }
+
+  .mulan {
+    position: absolute;
+    top: 240px;
+    right: 21%;
+  }
+
+  .moana {
+    position: absolute;
+    top: 240px;
+    left: 21%;
+  }
+
+  .everything {
+    position: absolute;
+    top: 47%;
+    left: 40%;
+  }
+
+  .connector {
+    position: absolute;
+    top: 240px;
+    left: 49%;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 0.2rem;
+  }
 }
