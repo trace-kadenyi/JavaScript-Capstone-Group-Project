@@ -2,9 +2,9 @@ import getLikes from './modules/getLikes.js';
 import fetchAnimes from './modules/fetchData.js';
 import addLogo from './modules/createHeader.js';
 import countitems from './modules/homepageCounter.js';
+import populateAnimes from './modules/populatePage.js';
 import './style.css';
 import addFooter from './modules/add-footer.js';
-import populateAnimes from './modules/populatePage.js';
 
 addLogo();
 countitems();

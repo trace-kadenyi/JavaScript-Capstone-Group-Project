@@ -1,8 +1,8 @@
 import postLike from './postLikes.js';
+
 import popup from './commentPopup.js';
 // call the unordered list
 const mainList = document.querySelector('.mainlist');
-// populate the pageq
 const populateAnimes = (animeList) => {
   const animeData = animeList.filter((item) => item.title.length < 20);
   animeData.forEach((anime) => {
@@ -25,7 +25,6 @@ const populateAnimes = (animeList) => {
     animeTitle.className = 'animetitle';
     animeTitle.innerHTML = `${anime.title}`;
     div.appendChild(animeTitle);
-    // heart
     // heart
     const heart = document.createElement('button');
     heart.className = 'heart';
@@ -53,26 +52,32 @@ const populateAnimes = (animeList) => {
 
     // comment box
     const index = animeData.findIndex((x) => x.id === anime.id);
-    // const indexId = index + 1;
     const commentBox = document.createElement('button');
     commentBox.id = `${index}`;
     commentBox.className = 'commentBox';
     commentBox.innerHTML = 'Comments';
     oneList.appendChild(commentBox);
 
+    // update likes
+    const updateLikes = () => {
+      const currentLikes = span.innerText;
+      span.innerText = currentLikes ? Number(currentLikes) + 1 : 1;
+    };
+
     // event listener to like an item
-    heart.addEventListener('click', (e) => {
+    heart.addEventListener('click', async (e) => {
+      heartIcon.style.color = 'red';
       const { id } = e.target;
-      postLike(id).then(() => {
-        window.location.reload();
-      });
+      updateLikes();
+      await postLike(id);
     });
+
     commentBox.addEventListener('click', (e) => {
       e.preventDefault();
       const { id } = e.target;
-      // console.log(indexId);
       popup(id, animeData);
     });
   });
 };
+
 export default populateAnimes;

@@ -25,10 +25,6 @@ li {
   border: none;
 }
 
-.like {
-  color: red;
-}
-
 .commentBox {
   padding: 0.25em 0.5em;
   width: 100px;
@@ -52,10 +48,6 @@ li {
 .divElement {
   display: flex;
   justify-content: space-between;
-}
-
-.fa-heart {
-  color: red;
 }
 
 a {
@@ -101,6 +93,7 @@ nav a:hover {
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
 }
 
 .mulan {
@@ -108,6 +101,7 @@ nav a:hover {
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
 }
 
 .from-text {
@@ -124,6 +118,12 @@ nav a:hover {
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.para {
+  display: flex;
+  gap: 5px;
+  flex-direction: row-reverse;
 }
 
 .popup {
@@ -170,14 +170,6 @@ nav a:hover {
   justify-content: space-around;
   width: 80%;
 }
-
-h2 {
-  font-size: 25px;
-}
-
-/* h3 {
-  font-size: 25px;
-} */
 
 .comments_div {
   display: flex;
@@ -331,8 +323,6 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-
-  /* font-family: poppins; */
 }
 
 footer {
