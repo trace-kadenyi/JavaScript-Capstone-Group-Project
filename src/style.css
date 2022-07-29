@@ -24,10 +24,6 @@ li {
   border: none;
 }
 
-.like {
-  color: red;
-}
-
 .commentBox {
   padding: 0.25em 0.5em;
   width: 100px;
@@ -51,10 +47,6 @@ li {
 .divElement {
   display: flex;
   justify-content: space-between;
-}
-
-.fa-heart {
-  color: red;
 }
 
 a {
@@ -123,6 +115,12 @@ nav a:hover {
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.para {
+  display: flex;
+  gap: 5px;
+  flex-direction: row-reverse;
 }
 
 /* media breakpoints */
