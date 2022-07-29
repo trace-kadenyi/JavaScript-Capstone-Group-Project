@@ -55,10 +55,8 @@ a {
 }
 
 .header {
-  border-bottom: 50px dotted black;
   border-bottom-right-radius: 40%;
   border-bottom-left-radius: 40%;
-  margin-bottom: 50px;
 }
 
 .logoimage {
@@ -114,6 +112,9 @@ nav a:hover {
 
 .counter {
   font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 2px;
   background-image: url('./back.PNG');
   background-size: cover;
   -webkit-background-clip: text;
@@ -187,13 +188,13 @@ nav a:hover {
 }
 
 .comment-form input {
-  width: 400px;
+  width: 80%;
   padding: 5px;
   color: #000;
 }
 
 .comment-form textarea {
-  width: 400px;
+  width: 80%;
   min-height: 60px;
   padding: 10px;
   color: #000;
@@ -332,6 +333,5 @@ footer {
   width: 100%;
   border-top: 1px solid #000;
   height: 100px;
-  background: aliceblue;
   border: 3px;
 }
