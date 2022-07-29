@@ -95,7 +95,6 @@ const popup = (ID, arr) => {
     formInput.value = '';
     textArea.value = '';
     const comments = commentsContainer;
-    console.log(comments);
     addComments(commentObj, commentId, comments);
   });
   getComments(ID, commentsContainer);
