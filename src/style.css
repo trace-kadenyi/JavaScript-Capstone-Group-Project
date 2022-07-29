@@ -89,7 +89,7 @@ nav a:hover {
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 25px;
+  font-size: 5rem;
 }
 
 .everything {
@@ -175,9 +175,9 @@ h2 {
   font-size: 25px;
 }
 
-h3 {
+/* h3 {
   font-size: 25px;
-}
+} */
 
 .comments_div {
   display: flex;

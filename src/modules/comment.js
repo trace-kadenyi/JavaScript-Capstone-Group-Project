@@ -15,7 +15,7 @@ const getComments = async (ID, CONTAINER) => {
   data.forEach((comment) => {
     const eachComment = document.createElement('li');
     eachComment.classList.add('eachcomment');
-    eachComment.innerHTML = `${comment.creation_date} ${comment.username}:${comment.comment}`;
+    eachComment.innerHTML = `${comment.creation_date} -  ${comment.username} : ${comment.comment}`;
     CONTAINER.append(eachComment);
   });
   commentCounter(data);
