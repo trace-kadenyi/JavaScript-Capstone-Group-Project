@@ -1,5 +1,6 @@
-const popupContainer = document.querySelector('.popup');
+import { addComments, getComments } from './comment.js';
 
+const popupContainer = document.querySelector('.popup');
 const popup = (ID, arr) => {
   const movie = {
     name: arr[ID].title,
@@ -8,7 +9,6 @@ const popup = (ID, arr) => {
     genre: arr[ID].genre,
     rating: arr[ID].rating,
     summary: arr[ID].summary,
-    // id: arr[ID].id,
   };
   const popDiv = document.createElement('div');
   popDiv.classList.add('pop_up');
@@ -57,6 +57,7 @@ const popup = (ID, arr) => {
   const formButton = document.createElement('button');
   formButton.setAttribute('type', 'submit');
   formButton.classList.add('submit-Btn');
+  formButton.id = '';
   formButton.innerHTML = 'Comment';
 
   commentForm.appendChild(formHeading);
@@ -79,6 +80,25 @@ const popup = (ID, arr) => {
     e.preventDefault();
     popupContainer.innerHTML = '';
   });
+
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const commentId = ID;
+    const name = formInput.value;
+    const commentValue = textArea.value;
+    const commentObj = {
+      id: commentId,
+      name,
+      comment: commentValue,
+    };
+
+    formInput.value = '';
+    textArea.value = '';
+    const comments = commentsContainer;
+    console.log(comments);
+    addComments(commentObj, commentId, comments);
+  });
+  getComments(ID, commentsContainer);
 };
 
 export default popup;
