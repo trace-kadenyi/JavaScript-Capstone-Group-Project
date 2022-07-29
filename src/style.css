@@ -1,6 +1,7 @@
-* {
+head * {
   margin: 0;
   padding: 0;
+  font-size: 25px;
 }
 
 .animeImage {
@@ -125,6 +126,87 @@ nav a:hover {
   -webkit-text-fill-color: transparent;
 }
 
+.popup {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.pop_up {
+  display: flex;
+  overflow-y: scroll;
+  position: fixed;
+  flex-direction: column;
+  width: 90%;
+  height: 98vh;
+  align-items: center;
+  gap: 5px;
+  top: 2px;
+  margin: 1% 5%;
+  padding-bottom: 20px;
+  background: rgba(94, 107, 168, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid #fff;
+}
+
+.pop_up img {
+  height: 100px;
+}
+
+.close_div {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px;
+  font-size: 25px;
+  color: #fff;
+}
+
+.specs {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+/* h3 {
+  font-size: 25px;
+} */
+
+.comments_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 5px;
+}
+
+.comment-form input {
+  width: 400px;
+  padding: 5px;
+  color: #000;
+}
+
+.comment-form textarea {
+  width: 400px;
+  min-height: 60px;
+  padding: 10px;
+  color: #000;
+}
+
 /* media breakpoints */
 @media screen and (max-width: 550px) {
   .logoimage {
@@ -160,8 +242,106 @@ nav a:hover {
     position: absolute;
     top: 240px;
     left: 49%;
-    font-size: 20px;
+    font-size: 25px;
     font-style: italic;
     letter-spacing: 0.2rem;
   }
+
+  .popup {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pop_up {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 90%;
+    height: 98vh;
+    align-items: center;
+    gap: 5px;
+    top: 2px;
+    margin: 1% 5%;
+    background: rgba(94, 107, 168, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid #fff;
+  }
+
+  .pop_up img {
+    height: 100px;
+  }
+
+  .close_div {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 20px;
+    font-size: 25px;
+    color: #fff;
+  }
+
+  .specs {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .comments_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 5px;
+  }
+
+  .comment-form input {
+    width: 400px;
+    padding: 5px;
+    color: #000;
+  }
+
+  .comment-form textarea {
+    width: 400px;
+    min-height: 60px;
+    padding: 10px;
+    color: #000;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  /* font-family: poppins; */
+}
+
+footer {
+  padding: 2rem;
+  position: sticky;
+  top: 100%;
+  width: 100%;
+  border-top: 1px solid #000;
+  height: 100px;
+  background: aliceblue;
+  border: 3px;
 }
