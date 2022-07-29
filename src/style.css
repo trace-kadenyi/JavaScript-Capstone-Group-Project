@@ -93,6 +93,7 @@ nav a:hover {
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
 }
 
 .mulan {
@@ -100,6 +101,7 @@ nav a:hover {
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
 }
 
 .from-text {
@@ -167,10 +169,6 @@ nav a:hover {
   display: flex;
   justify-content: space-around;
   width: 80%;
-}
-
-h2 {
-  font-size: 25px;
 }
 
 .comments_div {
@@ -325,8 +323,6 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-
-  /* font-family: poppins; */
 }
 
 footer {

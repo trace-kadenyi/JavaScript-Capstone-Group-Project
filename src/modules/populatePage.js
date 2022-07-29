@@ -52,13 +52,11 @@ const populateAnimes = (animeList) => {
 
     // comment box
     const index = animeData.findIndex((x) => x.id === anime.id);
-    // const indexId = index + 1;
     const commentBox = document.createElement('button');
     commentBox.id = `${index}`;
     commentBox.className = 'commentBox';
     commentBox.innerHTML = 'Comments';
     oneList.appendChild(commentBox);
-
 
     // update likes
     const updateLikes = () => {
@@ -73,14 +71,13 @@ const populateAnimes = (animeList) => {
       updateLikes();
       await postLike(id);
     });
-  });
-};
+
     commentBox.addEventListener('click', (e) => {
       e.preventDefault();
       const { id } = e.target;
-      // console.log(indexId);
       popup(id, animeData);
     });
   });
 };
+
 export default populateAnimes;
