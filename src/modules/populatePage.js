@@ -1,7 +1,8 @@
 import postLike from './postLikes.js';
+
+import popup from './commentPopup.js';
 // call the unordered list
 const mainList = document.querySelector('.mainlist');
-// populate the page
 const populateAnimes = (animeList) => {
   const animeData = animeList.filter((item) => item.title.length < 20);
   animeData.forEach((anime) => {
@@ -50,10 +51,14 @@ const populateAnimes = (animeList) => {
     para.appendChild(span);
 
     // comment box
+    const index = animeData.findIndex((x) => x.id === anime.id);
+    // const indexId = index + 1;
     const commentBox = document.createElement('button');
+    commentBox.id = `${index}`;
     commentBox.className = 'commentBox';
     commentBox.innerHTML = 'Comments';
     oneList.appendChild(commentBox);
+
 
     // update likes
     const updateLikes = () => {
@@ -70,5 +75,12 @@ const populateAnimes = (animeList) => {
     });
   });
 };
-
+    commentBox.addEventListener('click', (e) => {
+      e.preventDefault();
+      const { id } = e.target;
+      // console.log(indexId);
+      popup(id, animeData);
+    });
+  });
+};
 export default populateAnimes;
