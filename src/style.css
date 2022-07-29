@@ -1,0 +1,337 @@
+head * {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+
+.animeImage {
+  width: 250px;
+  height: 400px;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  max-width: 350px;
+}
+
+.heart {
+  margin-left: 15px;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.commentBox {
+  padding: 0.25em 0.5em;
+  width: 100px;
+  box-shadow: 1px 1px 0 0, 2px 2px 0 0, 3px 3px 0 0, 4px 4px 0 0, 5px 5px 0 0;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.commentBox:active {
+  box-shadow: 0 0 0 0;
+  top: 5px;
+  left: 5px;
+}
+
+.footer {
+  border-top: 1px black solid;
+}
+
+.divElement {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+}
+
+.logoimage {
+  width: 250px;
+  height: 140px;
+  margin-bottom: 25px;
+}
+
+nav a {
+  color: brown;
+}
+
+nav a:hover {
+  color: brown;
+  font-weight: bold;
+}
+
+.welcome {
+  background-image: url('./back.PNG');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+}
+
+.everything {
+  letter-spacing: 0.2rem;
+}
+
+.moana {
+  background-image: url('./mulan.jpg');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+}
+
+.mulan {
+  background-image: url('./moana.jpg');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+}
+
+.from-text {
+  letter-spacing: 0.3rem;
+}
+
+.characters {
+  letter-spacing: 0.2rem;
+}
+
+.counter {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 2px;
+  background-image: url('./back.PNG');
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.para {
+  display: flex;
+  gap: 5px;
+  flex-direction: row-reverse;
+}
+
+.popup {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.pop_up {
+  display: flex;
+  overflow-y: scroll;
+  position: fixed;
+  flex-direction: column;
+  width: 90%;
+  height: 98vh;
+  align-items: center;
+  gap: 5px;
+  top: 2px;
+  margin: 1% 5%;
+  padding-bottom: 20px;
+  background: rgba(94, 107, 168, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid #fff;
+}
+
+.pop_up img {
+  height: 100px;
+}
+
+.close_div {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px;
+  font-size: 25px;
+  color: #fff;
+}
+
+.specs {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.comments_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 5px;
+}
+
+.comment-form input {
+  width: 80%;
+  padding: 5px;
+  color: #000;
+}
+
+.comment-form textarea {
+  width: 80%;
+  min-height: 60px;
+  padding: 10px;
+  color: #000;
+}
+
+/* media breakpoints */
+@media screen and (max-width: 550px) {
+  .logoimage {
+    width: 170px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .header {
+    position: relative;
+  }
+
+  .mulan {
+    position: absolute;
+    top: 240px;
+    right: 21%;
+  }
+
+  .moana {
+    position: absolute;
+    top: 240px;
+    left: 21%;
+  }
+
+  .everything {
+    position: absolute;
+    top: 47%;
+    left: 40%;
+  }
+
+  .connector {
+    position: absolute;
+    top: 240px;
+    left: 49%;
+    font-size: 25px;
+    font-style: italic;
+    letter-spacing: 0.2rem;
+  }
+
+  .popup {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pop_up {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 90%;
+    height: 98vh;
+    align-items: center;
+    gap: 5px;
+    top: 2px;
+    margin: 1% 5%;
+    background: rgba(94, 107, 168, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid #fff;
+  }
+
+  .pop_up img {
+    height: 100px;
+  }
+
+  .close_div {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 20px;
+    font-size: 25px;
+    color: #fff;
+  }
+
+  .specs {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .comments_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 5px;
+  }
+
+  .comment-form input {
+    width: 400px;
+    padding: 5px;
+    color: #000;
+  }
+
+  .comment-form textarea {
+    width: 400px;
+    min-height: 60px;
+    padding: 10px;
+    color: #000;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+footer {
+  padding: 2rem;
+  position: sticky;
+  top: 100%;
+  width: 100%;
+  border-top: 1px solid #000;
+  height: 100px;
+  border: 3px;
+}
