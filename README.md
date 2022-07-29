@@ -2,15 +2,15 @@
 
 # Project Name: JavaScript Capstone Project
 
-> Description of the project: A Group Project........  
+> Description of the project: A project about an animations film site. It displays the pictures and titles of the movie and offers a comments section with more details.
 
 
 ## Built With
 
-- Major languages: HTML | CSS | JavaScript | Webpack
+- Major languages: HTML | CSS | JavaScript | Webpack | Jest
 
 ## Live Demo
-[Live Demo Link]
+[Live Demo Link](https://track92.github.io/JavaScript-Capstone-Group-Project/dist/)
 
 ## Getting started
 
