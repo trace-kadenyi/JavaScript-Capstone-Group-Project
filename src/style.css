@@ -122,6 +122,7 @@ nav a:hover {
   display: flex;
   gap: 5px;
   flex-direction: row-reverse;
+}
 
 .popup {
   display: flex;
