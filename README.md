@@ -10,7 +10,7 @@
 - Major languages: HTML | CSS | JavaScript | Webpack | Jest
 
 ## Live Demo
-[Live Demo Link](https://track92.github.io/JavaScript-Capstone-Group-Project/dist/)
+[Live Demo Link](https://aquamarine-speculoos-8d7a72.netlify.app/)
 
 ## Getting started
 
